@@ -11,7 +11,8 @@ class Entry:
         'eating out',
         'fun',
         'petcare',
-        'other'
+        'other',
+        'credit'
     ]
 
     def __init__(self, date, amount, description, category):
