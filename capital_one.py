@@ -34,8 +34,11 @@ def parse(in_line):
     category = convert_category(desc, category)
     if amount < 0:
         category = 'credit'
+        amount *= -1
+    else:
+        amount *= -1
 
-    entry = Entry(date, amount, desc, category)
+    entry = Entry(date, 'capital one', amount, desc, category)
 
     if drop_line(entry):
         return None

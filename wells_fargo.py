@@ -25,7 +25,7 @@ def parse(in_line):
     elif 'Apuovia LLC' in desc:
         category = 'rent'
 
-    entry = Entry(date, amount, desc, category)
+    entry = Entry(date, 'wells fargo', amount, desc, category)
 
     if drop_line(entry):
         return None

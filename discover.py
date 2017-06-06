@@ -23,10 +23,14 @@ def parse(in_line):
     category = ''
     if amount < 0:
         category = 'credit'
-    elif 'METRO-NORTH' in desc :
+        amount *= -1
+    else:
+        amount *= -1
+
+    if 'METRO-NORTH' in desc :
         category = 'transportation'
 
-    entry = Entry(date, amount, desc, category)
+    entry = Entry(date, 'discover', amount, desc, category)
 
     if drop_line(entry):
         return None

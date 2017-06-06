@@ -1,1 +1,3 @@
-cat ~/Desktop/Transactions-Download-03-05-2017.csv | python readcsv.py 
+cat ~/Desktop/capitalone-${1}.csv | python run.py capital_one
+cat ~/Desktop/discover-${1}.csv | python run.py discover
+cat ~/Desktop/wellsfargo-${1}.csv | python run.py wells_fargo
